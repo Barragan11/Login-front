@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Inicio</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">MiSitio</a>
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+    </div>
+    <div class="nav-right">
+      <span id="userName" class="user-name"></span>
+      <button id="loginBtn" class="icon-btn" title="Login">
+        <span class="login-icon">🔒</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Secciones principales -->
+  <main>
+    <section id="home">
+      <h1>Bienvenido a MiSitio</h1>
+      <p>Descubre cómo nuestras soluciones tecnológicas pueden ayudarte a mejorar tu presencia digital.</p>
+      <p>Ofrecemos herramientas modernas y accesibles para todo tipo de usuarios.</p>
+      <button id="infoBtn">Ver información</button>
+    </section>
+  </main>
+
+  <!-- Modal de Login (sin cambios) -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Iniciar Sesión</h2>
+      <form id="formLogin">
+        <input type="text" id="login" placeholder="Usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Creado por <strong>Luis Ángel Barragán González</strong> — 21 de octubre de 2025</p>
+  </footer>
+
+  <script>
+    // Reemplazo de alert con SweetAlert2
+    document.getElementById("infoBtn").addEventListener("click", () => {
+      Swal.fire({
+        title: "Información del sitio",
+        text: "MiSitio te ofrece recursos digitales eficientes y fáciles de usar para tus proyectos web.",
+        icon: "info",
+        confirmButtonText: "Cerrar"
+      });
+    });
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
